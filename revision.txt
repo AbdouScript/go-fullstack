@@ -1,0 +1,46 @@
+2.Configurez votre environnement de développement: 
+Node peut être installé à partir de NodeJS.org.
+L'application front-end pour ce cours peut être clonée avec  git clone  , installée avec  npm install  , et lancée avec  npm run start
+
+3.Démarrez votre serveur Node:
+Les projets Node sont initialisés avec la commande  npm init  .
+Un serveur Node basique est démarré avec la méthode  createServer  du package  http  .
+Nodemon est un package qui mettra à jour votre serveur démarré à chaque changement de fichier, vous facilitant le développement Node.
+ 
+4.Créez une application Express:
+Le framework Express est installé et enregistré dans le  package.json  avec   npm install express  .
+Pour créer une application Express, appelez simplement la méthode  express()  .
+Un middleware est un bloc de code qui traite les requêtes et réponses de votre application.
+Ajouter la normalisation de port, la gestion d'erreur et du logging basique à votre serveur Node le rend plus constant et plus facile à déboguer.
+
+5.Créez une route GET:
+La méthode app.use() vous permet d'attribuer un middleware à une route spécifique de votre application.
+Le CORS définit comment les serveurs et les navigateurs interagissent, en spécifiant quelles ressources peuvent être demandées de manière légitime – par défaut, les requêtes AJAX sont interdites.
+Pour permettre des requêtes cross-origin (et empêcher des erreurs CORS), des headers spécifiques de contrôle d'accès doivent être précisés pour tous vos objets de réponse.
+
+6.Créez une route POST:
+En passant votre middleware à  app.post()  au lieu de  app.use()  , il répondra uniquement aux requêtes de type POST.
+
+7.Configurez votre base de données:
+Pour des applications qui ont besoin d'évoluer rapidement, les bases de données NoSQL comme MongoDB sont souvent un bon choix de technologie.
+MongoDB Atlas permet d'héberger gratuitement une base de données MongoDB.
+Le package Mongoose facilite les interactions entre votre application Express et votre base de données MongoDB.
+
+8.Créez un schéma de données:
+La méthode  Schema  de Mongoose vous permet de créer un schéma de données pour votre base de données MongoDB.
+La méthode  model  transforme ce modèle en un modèle utilisable.
+
+9.Enregistrez et récupérez des données:
+Les méthodes de votre modèle Thing permettent d'interagir avec la base de données :
+save()  – enregistre un Thing ;
+find()  – retourne tous les Things ;
+findOne()  – retourne un seul Thing basé sur la fonction de comparaison qu'on lui passe (souvent pour récupérer un Thing par son identifiant unique).
+La méthode  app.get()  permet de réagir uniquement aux requêtes de type GET.
+
+10.Modifiez et supprimez des données:
+app.put()  et  app.delete()  attribuent des middlewares aux requêtes de type PUT et de type DELETE.
+Les méthodes  updateOne()  et  delete()  de votre modèle Thing permettent de mettre à jour ou de supprimer un Thing dans la base de données.
+
+
+
+
